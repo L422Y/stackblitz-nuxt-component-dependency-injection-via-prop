@@ -1,4 +1,17 @@
 {
+  "description": "An example of passing functions to Vue components as a form of dependency injection",
+  "keywords": [
+    "vue",
+    "nuxt",
+    "stackblitz",
+    "dependency-injection",
+    "typescript"
+  ],
+  "author": {
+    "email": "l422y@l422y.com",
+    "name": "Larry Williamson",
+    "url": "https://l422y.com/"
+  },
   "private": true,
   "scripts": {
     "build": "nuxt build",
