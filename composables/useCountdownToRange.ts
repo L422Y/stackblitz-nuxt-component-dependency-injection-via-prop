@@ -4,13 +4,9 @@ export const useCountdownToRange = function (input: Date) {
   const hoursRemaining = secondsRemaining / 60 / 60;
 
   const numHours = secondsRemaining / 3600;
-  const hours = Math.floor(numHours).toString().padStart(2, '0');
-  const minutes = Math.floor((secondsRemaining % 3600) / 60)
-    .toString()
-    .padStart(2, '0');
-  const seconds = Math.floor(secondsRemaining % 60)
-    .toString()
-    .padStart(2, '0');
+  const hours = Math.floor(numHours).toString();
+  const minutes = Math.floor((secondsRemaining % 3600) / 60).toString();
+  const seconds = Math.floor(secondsRemaining % 60).toString();
 
   let color = '#666666';
   let timeOfDay = '';
@@ -28,7 +24,7 @@ export const useCountdownToRange = function (input: Date) {
       timeOfDay = 'afternoon';
       color = 'orange';
       break;
-    case hour > 18 || hour < 6: // evening
+    case hour > 16 || hour < 20: // evening
       timeOfDay = 'evening';
       color = 'gold';
       break;

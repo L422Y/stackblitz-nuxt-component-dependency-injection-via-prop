@@ -1,11 +1,12 @@
 <template>
   <div>
     <Meter
-      v-for="[value, fn, label, tick] in items"
+      v-for="[value, fn, label, tick, style] in items"
       :label="label"
       :value="value"
       :fn="fn"
       :tick="tick || 0"
+      :style="style"
     />
   </div>
 </template>

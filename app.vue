@@ -29,8 +29,13 @@ let meters = [
   [tempValue, useTempToRange, 'TEMPURATURE (string)'],
   [huggableValue, useHuggableToRange, 'Hugability (string)'],
   [dateValue, useCountdownToRange, 'Time Remaining in Day (date)', tick],
-  [numValue, null, 'Percent (number)'],
-  [tempValue, dynamicHandler, 'TEMPURATURE (string w/ dynamic handler)'],
+  [numValue, null, 'Percent (number)', null, 'round'],
+  [
+    tempValue,
+    dynamicHandler,
+    'TEMPURATURE (string w/ dynamic handler)',
+    maintenanceMode,
+  ],
 ];
 
 let otherHandler = function (input) {
@@ -52,7 +57,7 @@ setInterval(() => {
 
   // step forward
   tick.value++;
-}, 1000);
+}, 2000);
 
 const toggleMaintenance = () => {
   maintenanceMode.value = !maintenanceMode.value;
